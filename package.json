@@ -1,6 +1,6 @@
 {
   "name": "exam-vue",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "考试系统",
   "author": "",
   "license": "MIT",
@@ -13,7 +13,8 @@
     "test:unit": "jest --clearCache && vue-cli-service test:unit",
     "test:ci": "npm run lint && npm run test:unit",
     "svgo": "svgo -f src/icons/svg --config=src/icons/svgo.yml",
-    "new": "plop"
+    "new": "plop",
+    "release": "standard-version"
   },
   "config": {
     "ghooks": {
