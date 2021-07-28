@@ -1,0 +1,128 @@
+{
+  "name": "exam-vue",
+  "version": "0.0.1",
+  "description": "考试系统",
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vue-cli-service serve",
+    "build:prod": "vue-cli-service build",
+    "build:stage": "vue-cli-service build --mode staging",
+    "preview": "node build/index.js --preview",
+    "lint": "eslint --ext .js,.vue src",
+    "test:unit": "jest --clearCache && vue-cli-service test:unit",
+    "test:ci": "npm run lint && npm run test:unit",
+    "svgo": "svgo -f src/icons/svg --config=src/icons/svgo.yml",
+    "new": "plop"
+  },
+  "config": {
+    "ghooks": {
+      "commit-msg": "validate-commit-msg"
+    },
+    "commitizen": {
+      "path": "git-cz"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,vue}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "keywords": [
+    "vue",
+    "admin",
+    "dashboard",
+    "element-ui",
+    "boilerplate",
+    "admin-template",
+    "management-system"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PanJiaChen/vue-element-admin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PanJiaChen/vue-element-admin/issues"
+  },
+  "dependencies": {
+    "@babel/core": "7.14.8",
+    "@babel/register": "7.14.5",
+    "@vue/cli-plugin-babel": "4.5.13",
+    "@vue/cli-plugin-eslint": "4.5.13",
+    "@vue/cli-plugin-unit-jest": "4.5.13",
+    "@vue/cli-service": "4.5.13",
+    "@vue/test-utils": "1.2.2",
+    "autoprefixer": "10.3.1",
+    "axios": "0.21.1",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "27.0.6",
+    "chalk": "4.1.1",
+    "chokidar": "3.5.2",
+    "clipboard": "2.0.8",
+    "codemirror": "5.62.2",
+    "connect": "3.7.0",
+    "driver.js": "0.9.8",
+    "dropzone": "5.9.2",
+    "echarts": "5.1.2",
+    "element-ui": "2.15.3",
+    "eslint": "6.8.0",
+    "eslint-plugin-vue": "7.14.0",
+    "file-saver": "2.0.5",
+    "fuse.js": "6.4.6",
+    "ghooks": "^2.0.4",
+    "html-webpack-plugin": "^4.0.0",
+    "husky": "7.0.1",
+    "js-cookie": "3.0.0",
+    "jshint": "2.13.0",
+    "jszip": "3.7.0",
+    "lint-staged": "11.1.1",
+    "mockjs": "1.1.0",
+    "node-sass": "6.0.1",
+    "normalize.css": "8.0.1",
+    "nprogress": "0.2.0",
+    "path-to-regexp": "6.2.0",
+    "plop": "2.7.4",
+    "postcss": "^8.1.0",
+    "qs": "6.10.1",
+    "sass-loader": "10.2.0",
+    "screenfull": "5.1.0",
+    "script-ext-html-webpack-plugin": "2.1.5",
+    "script-loader": "0.7.2",
+    "serve-static": "1.14.1",
+    "showdown": "1.9.1",
+    "sortablejs": "1.14.0",
+    "svg-sprite-loader": "6.0.9",
+    "svgo": "2.3.1",
+    "tasksfile": "5.1.1",
+    "tui-editor": "1.4.10",
+    "validate-commit-msg": "^2.14.0",
+    "vue": "2.6.14",
+    "vue-count-to": "1.0.13",
+    "vue-fullscreen": "2.5.2",
+    "vue-meditor": "^2.1.1",
+    "vue-router": "3.5.2",
+    "vue-splitpane": "1.0.6",
+    "vue-template-compiler": "2.6.14",
+    "vue-visibility-change": "1.2.1",
+    "vue-web-cam": "1.9.0",
+    "vuedraggable": "2.24.3",
+    "vuex": "3.6.2",
+    "webpack": "^4.36.0",
+    "xlsx": "0.17.0",
+    "yarn": "^1.22.11"
+  },
+  "engines": {
+    "node": ">=10.24",
+    "npm": ">= 6.14.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}
