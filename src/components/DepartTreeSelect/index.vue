@@ -11,7 +11,7 @@
       ref="tree"
       placeholder="选择部门"
       class="select-tree"
-      check-strictly="false"
+      check-strictly
       highlight-current
       default-expand-all
       :style="`min-width: ${treeWidth}`"
@@ -44,9 +44,15 @@ export default {
   },
   props: {
     // 接收绑定参数
-    value: String,
+    value: {
+      type: String,
+      default: 'a'
+    },
     // 输入框宽度
-    width: String,
+    width: {
+      type: String,
+      default: 'a'
+    },
     // 选项数据
     options: {
       type: Array,

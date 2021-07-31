@@ -314,6 +314,13 @@ export const asyncRoutes = [
       },
 
       {
+        path: 'log',
+        component: () => import('@/views/sys/log'),
+        name: 'SysLog',
+        meta: { title: '日志管理', icon: 'log' }
+      },
+
+      {
         path: 'user',
         component: () => import('@/views/sys/user'),
         name: 'SysUser',
